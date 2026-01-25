@@ -595,3 +595,89 @@ def reg_multi_pays(df_eurozone_complet):
         
         plt.tight_layout()
         plt.show()
+
+    
+def pib_dette_gouv_interet_france(df_france_analyse):
+    fig, ax1 = plt.subplots(figsize=(14, 7))
+    fig.patch.set_facecolor('white')
+    ax1.set_facecolor('#f8f9fa')
+
+    # ─────────────────────────────────────────
+    # Axe gauche : Taux de croissance du PIB
+    # ─────────────────────────────────────────
+    color1 = '#E63946'
+    ax1.set_xlabel('Année', fontsize=12, fontweight='bold')
+    ax1.set_ylabel('Taux de croissance du PIB (%)', fontsize=12, fontweight='bold', color=color1)
+
+    ax1.plot(
+        df_france_analyse['year'],
+        df_france_analyse['Taux_Croissance_PIB'],
+        linewidth=2.5,
+        marker='o',
+        markersize=6,
+        color=color1,
+        alpha=0.8,
+        label='Croissance du PIB'
+    )
+
+    ax1.tick_params(axis='y', labelcolor=color1)
+    ax1.axhline(y=0, color='gray', linestyle='--', linewidth=1, alpha=0.5)
+    ax1.grid(True, alpha=0.3, linestyle='--')
+
+    # ─────────────────────────────────────────
+    # Axe droit : Dette + Taux d’intérêt long terme
+    # ─────────────────────────────────────────
+    ax2 = ax1.twinx()
+    color2 = '#2E86AB'
+    color3 = '#2A9D8F'
+
+    ax2.set_ylabel('Dette (% PIB) / Taux d’intérêt (%)', fontsize=12, fontweight='bold')
+
+    # Dette gouvernementale
+    ax2.plot(
+        df_france_analyse['year'],
+        df_france_analyse['Dette_Gouv_PIB'],
+        linewidth=2.5,
+        marker='s',
+        markersize=6,
+        color=color2,
+        alpha=0.8,
+        label='Dette gouvernementale (% PIB)'
+    )
+
+    # Taux d’intérêt à long terme
+    ax2.plot(
+        df_france_analyse['year'],
+        df_france_analyse['Taux_Interet_Long_Terme'],
+        linewidth=2.5,
+        linestyle='--',
+        marker='^',
+        markersize=6,
+        color=color3,
+        alpha=0.85,
+        label='Taux d’intérêt à long terme'
+    )
+
+    ax2.tick_params(axis='y')
+
+    # ─────────────────────────────────────────
+    # Titre & légende
+    # ─────────────────────────────────────────
+    fig.suptitle(
+        'France : Croissance du PIB, dette publique et taux d’intérêt à long terme',
+        fontsize=16,
+        fontweight='bold'
+    )
+
+    lines1, labels1 = ax1.get_legend_handles_labels()
+    lines2, labels2 = ax2.get_legend_handles_labels()
+    ax1.legend(
+        lines1 + lines2,
+        labels1 + labels2,
+        fontsize=11,
+        loc='upper left',
+        framealpha=0.95
+    )
+
+    plt.tight_layout()
+    plt.show()
