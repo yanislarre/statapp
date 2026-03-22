@@ -1,0 +1,4 @@
+﻿Type de dette,OLS,Effets Fixes,IV (2SLS),CS-ARDL CT (full),CS-ARDL LT (full),CS-ARDL CT — Europe,CS-ARDL CT — OCDE∖EU,CS-ARDL CT — Pré-crise,CS-ARDL CT — Post-crise
+Dette des ménages,-0.0533***,-0.0932***,-0.0487***,-0.3288***,-0.0109,-0.3695**,-0.2744**,0.0709,-0.5905***
+Dette des entreprises,0.0026,-0.0015,—,0.0030,0.0031,0.0227,-0.0609*,-0.0436**,-0.0063
+Dette publique,-0.0288***,0.0133,—,-0.1979***,-0.0352,-0.2135***,-0.1713**,-0.1854***,-0.1994***
