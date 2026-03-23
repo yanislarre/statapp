@@ -1,0 +1,14 @@
+﻿Variable,"BDD orig.
+(loans & sec.)","BDD_vf réf.
+(loans & sec.)","BDD_vf
+(all instruments)","BDD_vf étendu
+(+ fiscales)"
+Dette ménages (CT),-0.3288***,-0.3288***,-0.3379***,-0.4273***
+Dette entreprises (CT),0.0030,0.0030,0.0002,0.0164
+Dette publique (CT),-0.1979***,-0.1979***,-0.1936***,-0.2107***
+Solde primaire (CT),—,—,—,-0.4233**
+Dépenses publiques (CT),—,—,—,-0.4123*
+Persistance (φ),0.4742***,0.4742***,0.4808***,0.4890***
+R² within,0.5750,0.5750,0.5611,0.6537
+N observations,945,945,861,660
+N pays,36.0,36.0,34.0,35.0
